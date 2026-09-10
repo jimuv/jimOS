@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html>
 
-  <body style="background-color: #c9e9ff; color: #2a343d; font-family: Arial, sans-serif;">
-<h1 style="color: #6fa8dc; margin: 4px;">hello welcome this is jimOS</h1>
-<h2>intros</h2>
-<p>hello whoevers reading this, welcome again</p>
+  <body style="margin: 0; background-image: url(./imgs/background.jpg); background-size: cover; height: 100vh; color: #2a343d; font-family: Arial, sans-serif;">
+
+    <div style="position: absolute; top: 50%; left: 50%;max-height: 400px; overflow: auto; 
+    transform: translate(-50%, -50%); padding: 16px; border: solid; width: 400px; border-radius: 4px; background-color: #c9e9ffad;">
+
+<h1 style="color: #6fa8dc; margin: 4px;">welcome to jimOS</h1>
+<p>hello whoever's reading this, welcome again</p>
 <img src="./imgs/ok.jfif" style="width: 200px; height: auto;" />
 <br>
-<h2>things i like</h2>
+<h2>about me</h2>
 <p>I like playing tennis and rhythm games.</p>
-<p>Some games I play:</p>
+<h2>things i like</h2>
 <ul>
   
   <li><abbr title="Sound Voltex">SDVX</abbr></li>
-<img src="./imgs/sdvx_banner.png" style="width: 190px; height: auto;border-radius: 8px;" />
   <li><em>osu!</em></li>
-  <img src="./imgs/osu.png" style="width: 190px; height: auto;border-radius: 8px;" />
   <li>Etterna</li>
-    <img src="./imgs/etterna.jpg" style="width: 140px; height: auto;border-radius: 8px;" />
   <li>Quaver</li>
-  <img src="./imgs/quaver.png" style="width: 140px; height: auto;border-radius: 8px;" />
+
 </ul>
 <h2>links</h2>
 <a href="https://github.com/jimuv">My Github</a>
 <br>
-    <a href="https://www.youtube.com/@r2bruh">My YouTube</a>
+<a href="https://www.youtube.com/@r2bruh">My YouTube</a>
+
+    </div>
+
+   <div
+    style="position: absolute; top: 0; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(201, 233, 255, 0.397); color: #2a343d; justify-content: space-between; gap: 32px;">
+
+        <p
+          style="margin-left: 16px; font-weight: 700; background-color: rgba(255, 255, 255, 0.5); padding: 4px 12px; border-radius: 16px;">
+            jimOS
+        </p>
+
+        <p
+          style="margin-left: 16px; background-color: rgba(255, 255, 255, 0.35); padding: 4px 12px; border-radius: 16px;">
+            cool os made by jimuv
+        </p>
+
+        <p
+          style="margin-right: 16px; background-color: rgba(255, 255, 255, 0.5); padding: 4px 12px; border-radius: 16px;">
+            <span id="timeElement"></span>
+        </p>
+
+  </div>
+
+<script>
+    function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+    }
+
+    setInterval(updateTime, 1000);
+</script>
   </body>
 
 </html>
