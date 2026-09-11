@@ -3,11 +3,11 @@
 
   <body style="margin: 0; background-image: url(./imgs/background.jpg); background-size: cover; height: 100vh; color: #2a343d; font-family: Arial, sans-serif;">
 
-    <div style="position: absolute; top: 50%; left: 50%;max-height: 400px; overflow: auto; 
+    <div id="window" style="position: absolute; top: 50%; left: 50%;max-height: 400px; overflow: auto; 
     transform: translate(-50%, -50%); padding: 16px; border: solid; width: 400px; border-radius: 4px; background-color: #c9e9ffad;">
-
+<p id="welcomeclose" style="cursor: pointer; margin: 0; width: 20px; text-align: center;">X</p>
 <h1 style="color: #6fa8dc; margin: 4px;">welcome to jimOS</h1>
-<p>hello whoever's reading this, welcome again</p>
+<p id="welcomeheader">hello whoever's reading this, welcome again</p>
 <img src="./imgs/ok.jfif" style="width: 200px; height: auto;" />
 <br>
 <h2>about me</h2>
@@ -31,10 +31,10 @@
    <div
     style="position: absolute; top: 0; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(201, 233, 255, 0.397); color: #2a343d; justify-content: space-between; gap: 32px;">
 
-        <p
-          style="margin-left: 16px; font-weight: 700; background-color: rgba(255, 255, 255, 0.5); padding: 4px 12px; border-radius: 16px;">
-            jimOS
-        </p>
+        <p id="welcomeopen"
+  style="margin-left: 16px; font-weight: 700; background-color: rgba(255, 255, 255, 0.5); padding: 4px 12px; border-radius: 16px;"> 
+    jimOS 
+  </p>  
 
         <p
           style="margin-left: 16px; background-color: rgba(255, 255, 255, 0.35); padding: 4px 12px; border-radius: 16px;">
@@ -46,8 +46,16 @@
             <span id="timeElement"></span>
         </p>
 
-  </div>
-
+   <div id="colorIcon" style="position: absolute; top: 120px; left: 20px; text-align: center; padding: 8px; margin: 8px; width: fit-content; cursor: pointer;">
+      <img src="./imgs/colorsimple.png" style="width: 64px; height: 64px; border-radius: 12px;">
+      <p style="margin: 0px; color: #fff;">Color</p>
+    </div>
+    <div id="color" style="position: absolute; top: 200px; left: 100px; padding: 16px; background-color: #c9e9ff; border: solid 1px #6fa8dc; border-radius: 8px; display: none;">
+      <p id="colorclose" style="cursor: pointer; margin: 0; width: 20px; text-align: center;">X</p>
+      <p>Color App</p>
+      <button id="colorbutton">Change Color</button>
+    </div>
+<script src="script.js"></script>
 <script>
     function updateTime() {
         var currentTime = new Date().toLocaleString();
