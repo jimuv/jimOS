@@ -76,7 +76,24 @@ colorClose.addEventListener("click", function() {
 });
 
 var colorButton = document.querySelector("#colorbutton");
-
+var colorNumber = 0;
+dragElement(document.getElementById("color"));
 colorButton.addEventListener("click", function() {
-  colorButton.style.backgroundColor = "#6fa8dc";
+  colorNumber++;
+  if (colorNumber % 2 === 0) {
+    colorButton.style.backgroundColor = "#6fa8dc";
+  } else {
+    colorButton.style.backgroundColor = "#d9d9d9";
+  }
+});
+
+var aboutScreen = document.querySelector("#about");
+var aboutIcon = document.querySelector("#aboutIcon");
+var aboutClose = document.querySelector("#aboutclose");
+dragElement(aboutScreen);
+aboutIcon.addEventListener("click", function() {
+  openWindow(aboutScreen);
+});
+aboutClose.addEventListener("click", function() {
+  closeWindow(aboutScreen);
 });
